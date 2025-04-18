@@ -2,6 +2,7 @@
 
 :root {
   --background: #ffffff;
+  /* --spacing: 1rem; */
   --foreground: #171717;
 }
 
@@ -14,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #dddddd;
     --foreground: #ededed;
   }
 }
