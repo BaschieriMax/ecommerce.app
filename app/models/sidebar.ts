@@ -1,6 +1,8 @@
 import { IconType } from "react-icons";
-import { FaProductHunt } from "react-icons/fa";
+import { FaIndustry, FaShoppingBag, FaUsers, FaTable } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
+import { IoMdSettings } from "react-icons/io";
+import { RiAdminFill } from "react-icons/ri";
 
 export type SingleSection = {
   title: string;
@@ -19,18 +21,33 @@ export const sideBarSection: SingleSection[] = [
     icon: IoHome,
   },
   {
-    title: "page 2",
-    href: "/products",
-    icon: FaProductHunt,
+    title: "Shop",
+    href: "/shop",
+    icon: FaShoppingBag,
   },
   {
-    title: "page 3",
-    href: "",
-    icon: FaProductHunt,
+    title: "Data Analysis",
+    href: "/analysis",
+    icon: FaTable,
   },
   {
-    title: "page 4",
-    href: "",
-    icon: FaProductHunt,
+    title: "Industry",
+    href: "/industry",
+    icon: FaIndustry,
+  },
+  {
+    title: "Contact Clients",
+    href: "/contactclients",
+    icon: FaUsers,
+  },
+  {
+    title: "Settings",
+    href: "/settings",
+    icon: IoMdSettings,
+  },
+  {
+    title: "Admin",
+    href: "/admin",
+    icon: RiAdminFill,
   },
 ];

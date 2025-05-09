@@ -1,14 +1,16 @@
-import UserInfo from "./UserInfo/userinfo";
+import LoginBtn from "@/app/ui/LoginBtn";
+import Title from "./Title";
+import { getAuthenticatedUser } from "@/app/services/apiUsers";
 
-const Header = () => {
+export default async function Header() {
+  const { data } = await getAuthenticatedUser();
+  console.log(data);
   return (
-    <header className="p-4 bg-gray-600 shadow-md">
+    <header className="p-4 bg-black shadow-md">
       <div className="flex items-center justify-between">
-        <div className="text-2xl font-bold text-white">Digicant</div>
-        <UserInfo />
+        <Title />
+        {data.user?.aud === "authenticated" && <LoginBtn />}
       </div>
     </header>
   );
-};
-
-export default Header;
+}
